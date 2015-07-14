@@ -1,0 +1,14 @@
+dn: cn=ldapfs,cn=schema,cn=config
+objectClass: olcSchemaConfig
+cn: ldapfs
+olcAttributeTypes: ( 1.3.1.4.1.42031.1.1.1 NAME 'filename' EQUALITY caseExactMatch SUBSTR caseExactSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{512} SINGLE-VALUE )
+olcAttributeTypes: ( 1.3.1.4.1.42031.1.1.1.2 NAME 'stmode' EQUALITY integerMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE )
+olcAttributeTypes: ( 1.3.1.4.1.42031.1.1.1.3 NAME 'stnlink' EQUALITY integerMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE )
+olcAttributeTypes: ( 1.3.1.4.1.42031.1.1.1.4 NAME 'stuid' EQUALITY integerMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE )
+olcAttributeTypes: ( 1.3.1.4.1.42031.1.1.1.5 NAME 'stgid' EQUALITY integerMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE )
+olcAttributeTypes: ( 1.3.1.4.1.42031.1.1.1.6 NAME 'strdev' EQUALITY integerMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE )
+olcAttributeTypes: ( 1.3.1.4.1.42031.1.1.1.7 NAME 'stsize' EQUALITY integerMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE )
+olcAttributeTypes: ( 1.3.1.4.1.42031.1.1.1.8 NAME 'stblksize' EQUALITY integerMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE )
+olcAttributeTypes: ( 1.3.1.4.1.42031.1.1.1.9 NAME 'stblocks' EQUALITY integerMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE )
+olcAttributeTypes: ( 1.3.1.4.1.42031.1.1.1.10 NAME 'statime' EQUALITY integerMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE )
+olcObjectClasses: ( 1.3.1.4.1.42031.1.2.1.1 NAME 'ldapfsFile' AUXILIARY MUST ( filename $ stmode $ stnlink $ stuid $ stuid $ stgid $ strdev $ stsize $ stblksize $ stblocks $ statime ) )
